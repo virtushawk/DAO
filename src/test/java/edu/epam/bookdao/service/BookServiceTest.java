@@ -16,7 +16,7 @@ import java.util.List;
 
 public class BookServiceTest {
     public Book book;
-    public String FILEPATH = "file/test.txt";
+    public final String FILEPATH = "file/test.txt";
 
     @BeforeClass
     public void beforeClass(){

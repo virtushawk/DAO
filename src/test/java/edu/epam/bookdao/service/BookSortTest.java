@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BookSortTest {
-    public String FILEPATH = "file/test.txt";
+    public final String FILEPATH = "file/test.txt";
 
     @BeforeClass
     public void beforeClass(){
