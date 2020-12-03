@@ -126,13 +126,13 @@ public class Book {
     public int hashCode() {
         int hash = 17;
         hash = hash * 23 + (int) bookId;
-        hash = hash * 23 + title.hashCode();
-        hash = hash * 23 + author.hashCode();
-        hash = hash * 23 + publisher.hashCode();
+        hash = hash * 23 + ((title == null) ? 0 : title.hashCode());
+        hash = hash * 23 + ((author == null) ? 0 : author.hashCode());
+        hash = hash * 23 + ((publisher == null) ? 0 : publisher.hashCode());
         hash = hash * 23 + year;
         hash = hash * 23 + pageNum;
-        hash = hash * 23 + price.hashCode();
-        hash = hash * 23 + cover.hashCode();
+        hash = hash * 23 + ((price == null) ? 0 : price.hashCode());
+        hash = hash * 23 + ((cover == null) ? 0 : cover.hashCode());
         return hash;
     }
 }
