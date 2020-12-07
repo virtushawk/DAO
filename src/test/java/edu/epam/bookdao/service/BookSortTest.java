@@ -14,7 +14,7 @@ import java.util.Comparator;
 import java.util.List;
 
 public class BookSortTest {
-    public final String FILEPATH = "file/test.txt";
+    public final static String FILEPATH = "file/test.txt";
     public ArrayList<Book> expected;
 
     @BeforeClass

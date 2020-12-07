@@ -21,13 +21,13 @@ h
 8src/main/java/edu/epam/bookdao/dao/impl/BookDaoImpl.java,7\6\76b6dc4355335d0307aa2d4f3cf886328161c437
 p
 @src/main/java/edu/epam/bookdao/service/impl/BookServiceImpl.java,e\d\ed8652deced78f525801f160349c264fa7f83776
-D
-file/sortByPrice.txt,1\f\1fcf69b8b2e4aef03bfd774d3138332767a57bb5
-D
-file/sortByTitle.txt,3\a\3abd3dd3402cb52be2c583311bb49d9442adf0b4
 =
 file/test.txt,e\5\e5d98661e8fd87ec2326b9f6ea4ec6f9b25fb740
-A
-file/sortById.txt,1\4\14357d1d0a3d3b28b457871cd33b832e811423b4
 h
 8src/test/java/edu/epam/bookdao/service/BookSortTest.java,c\1\c17f47516fe6548ce98a5c4a3c294d6d5571ca0d
+<
+log/logs.txt,c\6\c6b6fc340a4565d6ca821330e9d5cb97965c3b9c
+e
+5src/main/java/edu/epam/bookdao/reader/BookReader.java,5\6\56d1e4204505721360cf750dd3b2378ac26f7f64
+d
+4src/main/java/edu/epam/bookdao/util/IdGenerator.java,d\c\dc5b5c8103f22a5fe3a0702938e16273d462af23

@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 public class BookServiceTest {
-    public final String FILEPATH = "file/test.txt";
+    public final static String FILEPATH = "file/test.txt";
 
     @BeforeClass
     public void beforeClass(){
