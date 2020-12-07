@@ -1,6 +1,0 @@
-3 "Don Quixote" "Miguel de Cervantes" HARPERCOLLINS 1605 343 12.12 PERFECT_BINDING
-1 "In Search of Lost Time" "Marcel Proust" PENGUIN_RANDOM_HOUSE 1913 500 3.43 PAPERBACK
-6 "Moby Dick" "Herman Melville" SIMON_AND_SCHUSTER 1851 600 13.23 WIRE_BINDING
-5 "One Hundred Years of Solitude" "Gabriel Garcia Marquez" PEARSON_EDUCATION 1944 240 15.4 BOARD_BOOK_BINDING
-4 "The Great Gatsby" "F. Scott Fitzgerald" CENGAGE_LEARNING 1925 123 5.45 PERFECT_BINDING
-2 "Ulysses" "James Joyce" HACHETTE_LIVRE 1922 400 6.54 HARDCOVER

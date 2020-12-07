@@ -13,9 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class InputReader {
-    private final Logger logger = LogManager.getLogger(InputReader.class);
-    private static final String BOOK_READ_REGEX = "\"?( |$)(?=(([^\"]*\"){2})*[^\"]*$)\"?";
+public class BookReader {
+    private final Logger logger = LogManager.getLogger(BookReader.class);
 
     public List<Book> readFromFile(String path){
         File file = new File(path);
@@ -23,22 +22,25 @@ public class InputReader {
         try (Scanner scanner = new Scanner(file)) {
             while (scanner.hasNextLine()){
                 String line = scanner.nextLine();
-                String [] data = line.split(BOOK_READ_REGEX);
-                long bookId = Long.parseLong(data[0]);
-                String title = data[1];
-                String authors = data[2];
-                Publisher publisher = Publisher.valueOf(data[3]);
-                int year = Integer.parseInt(data[4]);
-                int pageNum = Integer.parseInt(data[5]);
-                BigDecimal price = new BigDecimal(data[6]);
-                Cover cover = Cover.valueOf(data[7]);
-                Book book = new Book(bookId,title,authors,publisher,year,pageNum,price,cover);
-                logger.info("book added to storage {}",book);
+                Book book = parseBook(line);
                 books.add(book);
+                logger.info("book added to storage {}",book);
             }
         } catch (FileNotFoundException e) {
             logger.error(e);
         }
         return books;
+    }
+
+    public Book parseBook(String line){
+        String [] data = line.split(",");
+        String title = data[0];
+        String authors = data[1];
+        Publisher publisher = Publisher.valueOf(data[2]);
+        int year = Integer.parseInt(data[3]);
+        int pageNum = Integer.parseInt(data[4]);
+        BigDecimal price = new BigDecimal(data[5]);
+        Cover cover = Cover.valueOf(data[6]);
+        return new Book(title,authors,publisher,year,pageNum,price,cover);
     }
 }

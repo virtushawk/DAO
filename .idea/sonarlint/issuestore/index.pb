@@ -1,8 +1,6 @@
 
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-=
-logs/logs.txt,4\d\4dd13a71f7723378b1eb2db6889d2f6058b8c595
 `
 0src/main/java/edu/epam/bookdao/entity/Cover.java,7\4\7469c25a4885d9f3e5b8df51d696a03d40e43fe5
 d
@@ -13,10 +11,6 @@ _
 /src/main/java/edu/epam/bookdao/entity/Book.java,6\a\6ab65cf41f8928c692ac16665823b4561fb20c10
 k
 ;src/test/java/edu/epam/bookdao/service/BookServiceTest.java,a\5\a5135a3cea23dfe284ef35f22f31c65cb53e7898
-f
-6src/main/java/edu/epam/bookdao/reader/InputReader.java,8\a\8aa69e779ee0b84e76eef56e6db5a6e9dfe2b7f9
-r
-Bsrc/main/java/edu/epam/bookdao/exception/BookServiceException.java,5\c\5c67682b7bf25d435cf0c1b8e0663ff93802b051
 n
 >src/main/java/edu/epam/bookdao/exception/BookDaoException.java,b\5\b51a54b08d66a8bddf3aca4810e561da2b2bbf0c
 g
@@ -27,3 +21,13 @@ h
 8src/main/java/edu/epam/bookdao/dao/impl/BookDaoImpl.java,7\6\76b6dc4355335d0307aa2d4f3cf886328161c437
 p
 @src/main/java/edu/epam/bookdao/service/impl/BookServiceImpl.java,e\d\ed8652deced78f525801f160349c264fa7f83776
+D
+file/sortByPrice.txt,1\f\1fcf69b8b2e4aef03bfd774d3138332767a57bb5
+D
+file/sortByTitle.txt,3\a\3abd3dd3402cb52be2c583311bb49d9442adf0b4
+=
+file/test.txt,e\5\e5d98661e8fd87ec2326b9f6ea4ec6f9b25fb740
+A
+file/sortById.txt,1\4\14357d1d0a3d3b28b457871cd33b832e811423b4
+h
+8src/test/java/edu/epam/bookdao/service/BookSortTest.java,c\1\c17f47516fe6548ce98a5c4a3c294d6d5571ca0d

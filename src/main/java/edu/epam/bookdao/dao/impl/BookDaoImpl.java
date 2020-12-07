@@ -2,6 +2,8 @@ package edu.epam.bookdao.dao.impl;
 
 import edu.epam.bookdao.dao.BookDao;
 import edu.epam.bookdao.entity.Book;
+import edu.epam.bookdao.entity.Cover;
+import edu.epam.bookdao.entity.Publisher;
 import edu.epam.bookdao.exception.BookDaoException;
 import edu.epam.bookdao.storage.BookStorage;
 
@@ -29,10 +31,14 @@ public class BookDaoImpl implements BookDao {
         BookStorage bookStorage = BookStorage.getInstance();
         ArrayList<Book> books = (ArrayList<Book>) bookStorage.getBooks();
         Book result = null;
-        for (Book book : books) {
-            if (book.getBookId() == id){
+        int i = 0;
+        while (i < books.size()) {
+            Book book = books.get(i);
+            if(book.getBookId() == id){
                 result = book;
+                break;
             }
+            i++;
         }
         if (result == null){
             throw new BookDaoException("There is no book with id " + id);
@@ -45,10 +51,14 @@ public class BookDaoImpl implements BookDao {
         BookStorage bookStorage = BookStorage.getInstance();
         ArrayList<Book> books = (ArrayList<Book>) bookStorage.getBooks();
         Book result = null;
-        for (Book book : books) {
-            if (book.getTitle().equals(title)){
+        int i = 0;
+        while (i < books.size()) {
+            Book book = books.get(i);
+            if(book.getTitle().equals(title)){
                 result = book;
+                break;
             }
+            i++;
         }
         if (result == null){
             throw new BookDaoException("There is no book with title " + title);
@@ -75,33 +85,51 @@ public class BookDaoImpl implements BookDao {
     }
 
     @Override
-    public void updateTitle(Book book, String title) throws BookDaoException{
+    public void updateTitle(Long id, String title) {
         BookStorage bookStorage = BookStorage.getInstance();
-        if (!bookStorage.contains(book)){
-            throw new BookDaoException("Book doesn't exist " + book);
-        }
-        int index = bookStorage.indexOf(book);
-        bookStorage.get(index).setTitle(title);
+        Book book = bookStorage.get(id.intValue());
+        book.setTitle(title);
     }
 
     @Override
-    public void updateAuthor(Book book,String author) throws BookDaoException {
+    public void updateAuthor(Long id, String author) {
         BookStorage bookStorage = BookStorage.getInstance();
-        if (!bookStorage.contains(book)){
-            throw new BookDaoException("Book doesn't exist " + book);
-        }
-        int index = bookStorage.indexOf(book);
-        bookStorage.get(index).setAuthor(author);
-
+        Book book = bookStorage.get(id.intValue());
+        book.setAuthor(author);
     }
 
     @Override
-    public void updatePrice(Book book, BigDecimal price) throws BookDaoException {
+    public void updatePrice(Long id, BigDecimal price) {
         BookStorage bookStorage = BookStorage.getInstance();
-        if (!bookStorage.contains(book)){
-            throw new BookDaoException("Book doesn't exist " + book);
-        }
-        int index = bookStorage.indexOf(book);
-        bookStorage.get(index).setPrice(price);
+        Book book = bookStorage.get(id.intValue());
+        book.setPrice(price);
+    }
+
+    @Override
+    public void updatePublisher(Long id, Publisher publisher) {
+        BookStorage bookStorage = BookStorage.getInstance();
+        Book book = bookStorage.get(id.intValue());
+        book.setPublisher(publisher);
+    }
+
+    @Override
+    public void updateYear(Long id, int year) {
+        BookStorage bookStorage = BookStorage.getInstance();
+        Book book = bookStorage.get(id.intValue());
+        book.setYear(year);
+    }
+
+    @Override
+    public void updatePageNum(Long id, int pageNum) {
+        BookStorage bookStorage = BookStorage.getInstance();
+        Book book = bookStorage.get(id.intValue());
+        book.setPageNum(pageNum);
+    }
+
+    @Override
+    public void updateCover(Long id, Cover cover) {
+        BookStorage bookStorage = BookStorage.getInstance();
+        Book book = bookStorage.get(id.intValue());
+        book.setCover(cover);
     }
 }

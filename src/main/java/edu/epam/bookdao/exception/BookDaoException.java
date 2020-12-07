@@ -1,8 +1,7 @@
 package edu.epam.bookdao.exception;
 
 public class BookDaoException extends Exception {
-    public BookDaoException() {
-    }
+    public BookDaoException() {}
 
     public BookDaoException(String message) {
         super(message);

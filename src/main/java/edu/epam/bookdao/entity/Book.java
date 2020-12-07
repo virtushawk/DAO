@@ -1,10 +1,11 @@
 package edu.epam.bookdao.entity;
 
+import edu.epam.bookdao.util.IdGenerator;
+
 import java.math.BigDecimal;
 
 public class Book {
-
-    private long bookId;
+    private long bookId = IdGenerator.generateId();
     private String title;
     private String author;
     private Publisher publisher;
@@ -15,10 +16,8 @@ public class Book {
 
     public Book() {}
 
-    public Book(long bookId, String title, String author, Publisher publisher, int year, int pageNum,
-                BigDecimal price, Cover cover) {
-
-        this.bookId = bookId;
+    public Book(String title, String author, Publisher publisher, int year, int pageNum, BigDecimal price,
+                Cover cover) {
         this.title = title;
         this.author = author;
         this.publisher = publisher;
@@ -30,10 +29,6 @@ public class Book {
 
     public long getBookId() {
         return bookId;
-    }
-
-    public void setBookId(long bookId) {
-        this.bookId = bookId;
     }
 
     public String getTitle() {

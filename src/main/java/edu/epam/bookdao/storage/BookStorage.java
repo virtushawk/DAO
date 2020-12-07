@@ -34,9 +34,4 @@ public class BookStorage {
     public Book get(int index){
         return books.get(index);
     }
-
-    public int indexOf(Book book){
-        return books.indexOf(book);
-    }
-
 }
